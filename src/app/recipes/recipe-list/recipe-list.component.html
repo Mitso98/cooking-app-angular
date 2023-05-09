@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-12 my-5">
+    <button class="btn btn-success">New Recipe</button>
+  </div>
+</div>
+<hr />
+<div class="row">
+  <div class="col-12">
+    <div class="list-group">
+      <app-recipe-item
+        (selectedRecipe)="catchSelectedRecipe($event)"
+        *ngFor="let recipe of recipes"
+        [recipe]="recipe"
+      ></app-recipe-item>
+    </div>
+  </div>
+</div>
